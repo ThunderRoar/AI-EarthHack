@@ -1,17 +1,20 @@
 import './App.css'
 
-import Info from './components/InfoPanel';
-import Eval from './components/EvalPane';
-import EvalPane from './components/EvalPane';
+import EvalPanel from './components/EvalPanel';
 import InfoPanel from './components/InfoPanel';
 
 function App() {
   return (
-    <div>
-      <h1>App</h1>
-      <InfoPanel></InfoPanel>
-      <EvalPane></EvalPane>
-    </div>
+    <main>
+      <div className='main'>
+        <div className='gradient'/>
+      </div>
+
+      <div className='app'>
+        <InfoPanel/>
+        <EvalPanel/>
+      </div>
+    </main>
   )
 }
 

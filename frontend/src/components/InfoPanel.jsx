@@ -47,4 +47,4 @@ const Description = () => {
   )
 }
 
-export default InfoPanel
+export default InfoPanel;
