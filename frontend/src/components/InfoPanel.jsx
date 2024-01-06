@@ -9,7 +9,41 @@ import React from 'react'
 
 const InfoPanel = () => {
   return (
-    <div>InfoPanel</div>
+    <div>
+      <div>
+        <h1>Team Time Travellers (title)</h1>
+        <Logo></Logo>
+        <Header></Header>
+        <Links></Links>
+      </div>
+    </div>
+  )
+}
+
+const Header = () => {
+  return(
+    <p>InfoPanel</p>
+  )
+}
+
+const Logo = () => {
+  return (
+    <img></img>
+  )
+}
+
+const Links = () => {
+  return (
+    <div>
+      <a>Team Time Travellers GitHub repo</a>
+      <a>AIEarthHack Page</a>
+    </div>
+  )
+}
+
+const Description = () => {
+  return (
+    <p>Description: this is used to evaluate stuff</p>
   )
 }
 
