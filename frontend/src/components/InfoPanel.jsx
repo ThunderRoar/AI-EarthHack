@@ -6,37 +6,48 @@ Use good css
 */
 
 import React from 'react'
+import './InfoPanel.css'
 
 const InfoPanel = () => {
   return (
-    <div>
-      <div>
-        <h1>Team Time Travellers (title)</h1>
-        <Logo></Logo>
-        <Header></Header>
-        <Links></Links>
-      </div>
+    <div class="infoPanel">
+      
+        <div class="headerLine">
+          <Logo></Logo>
+          <Header></Header>
+          <Links></Links>
+        </div>
+        <Title></Title>
+        <Description></Description>
+
     </div>
+  )
+}
+
+const Title = () => {
+  return(
+    <h1 class="title">Team Time Travellers (title)</h1>
   )
 }
 
 const Header = () => {
   return(
-    <p>InfoPanel</p>
+    <p class="header">Header</p>
   )
 }
 
 const Logo = () => {
   return (
-    <img></img>
+    <img class="logo" src="/temp_logo.png"></img>
   )
 }
 
 const Links = () => {
   return (
-    <div>
-      <a href="https://github.com/ThunderRoar/AI-EarthHack/tree/main">Team Time Travellers GitHub repo</a>
-      <a href='https://www.genaicompetition.com/'>The GenAI Competition Page</a>
+    <div class="links">
+      <a href="https://github.com/ThunderRoar/AI-EarthHack/tree/main" target="_blank">Team Time Travellers GitHub repo</a>
+      <text> </text>
+      <a href='https://www.genaicompetition.com/' target="_blank">The GenAI Competition Page</a>
     </div>
   )
 }
