@@ -17,7 +17,7 @@
 1. Run `docker run -d -p 6379:6379 -p 8001:8001 redis/redis-stack:latest`
 2. Redis URL is now `redis://localhost:6379`
 ### Preparing Environment
-> If running Docker container instead, skip to [Running Container](###running-container), assuming dataset is already imported
+> If running Docker container instead, skip to [Running Container](#running-container), assuming dataset is already imported
 1. `cd` into this directory and create a virtual environment `python3.11 -m venv venv`
 2. Activate the environment `source venv/bin/activate`
 3. Install all modules `pip install -r requirements.txt`
