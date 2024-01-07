@@ -1,5 +1,6 @@
 import React from 'react'
 import Box from './Box.jsx'
+import Entry from './Entry.jsx'
 import './SortPanel.css'
 
 const SortPanel = ({isVisible, data}) =>{
@@ -31,15 +32,6 @@ const GetSortedEntries = ({data}) => {
     }
 
     return comps;
-}
-
-const Entry = ({entry}) => {
-    return (
-        <Box>
-            <h3>{entry.ID}: {entry.problem}</h3>
-            <p>{entry.solution}</p>
-        </Box>
-    )
 }
 
 function sortData(data){
