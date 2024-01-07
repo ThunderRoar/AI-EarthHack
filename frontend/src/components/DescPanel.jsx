@@ -4,11 +4,11 @@ import './DescPanel.css'
 
 const DescPanel = () =>{
     return(
-        <Box>
-            <p class="descPanelP">
-                Type in a problem and solution below to get a 3-point evaluation
-            </p>
-        </Box>
+        <div className='desc'>
+            <h2 class="descPanelP">
+                Explore sustainable solutions with EvalGen! Submit your questions and ideas for a quick evaluation based on sustainability, innovation, and scalability. Gain insights to drive eco-friendly and scalable progress.
+            </h2>
+        </div>
     )
 }
 

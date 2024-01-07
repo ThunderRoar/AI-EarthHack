@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { loading, checkIcon, copyIcon, sendIcon } from '../assets';
 import './EvalPanel.css';
 
+import ApiDataFetcher from './DataFetcher.jsx'
+
 const EvalPanel = () => {
   const [probSolve, setprobSolve] = useState({
     problem: '',
@@ -76,7 +78,7 @@ const EvalPanel = () => {
 
       {/* Display resukts from the user input */}
       <div className='eval-result'>
-        Solution Evaluation
+        <ApiDataFetcher></ApiDataFetcher>
       </div>
 
     </section>

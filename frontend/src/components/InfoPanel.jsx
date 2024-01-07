@@ -24,7 +24,6 @@ const InfoPanel = () => {
             <HackathonLink></HackathonLink>
           </div>
         </nav>
-        <ApiDataFetcher></ApiDataFetcher>
       </Box>
       {/* <Title></Title> */}
     </div>

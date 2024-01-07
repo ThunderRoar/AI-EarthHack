@@ -14,6 +14,7 @@ function ApiDataFetcher() {
           throw new Error('Network response was not ok');
         }
         const result = await response.json();
+        console.log(result);
         setData(result);
       } catch (error) {
         setError(error);
@@ -33,7 +34,6 @@ function ApiDataFetcher() {
         <div>
           <h2>Data from API:</h2>
           <p>{data.anime}</p>
-          {/* Display other data properties as needed */}
         </div>
       )}
     </div>
