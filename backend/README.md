@@ -11,7 +11,7 @@
 ```
 ### Preparing Environment
 1. `cd` into this directory and create a virtual environment `python3.11 -m venv venv`
-2. Activate the environment `source env/bin/activate`
+2. Activate the environment `source venv/bin/activate`
 3. Install all modules `pip install -r requirements. txt`
 4. Create a `.env` file in the root directory similar to below
 ```markdown

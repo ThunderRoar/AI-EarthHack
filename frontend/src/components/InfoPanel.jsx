@@ -9,6 +9,9 @@ import React from 'react'
 import './InfoPanel.css'
 import Box from './Box.jsx'
 
+import DataFetcher from './DataFetcher.jsx'
+import ApiDataFetcher from './DataFetcher.jsx'
+
 const InfoPanel = () => {
   return (
     <div className='infopanel'>
@@ -21,6 +24,7 @@ const InfoPanel = () => {
             <HackathonLink></HackathonLink>
           </div>
         </nav>
+        <ApiDataFetcher></ApiDataFetcher>
       </Box>
       {/* <Title></Title> */}
     </div>
