@@ -11,10 +11,12 @@ import './InfoPanel.css'
 const InfoPanel = () => {
   return (
     <header className='infopanel'>
-      <nav className='headerLine'>
+      <div className='headerLine'>
         <Logo></Logo>
+        <Header></Header>
         <Links></Links>
-      </nav>
+      </div>
+      <Description></Description>
     </header>
 
     // <div class="infoPanel">
@@ -39,7 +41,7 @@ const Title = () => {
 
 const Header = () => {
   return(
-    <p class="header">Header</p>
+    <p class="header">Sustainability Problem-Polution Assistant by Team Time Travellers</p>
   )
 }
 
@@ -53,14 +55,13 @@ const Links = () => {
   return (
     <div>
       <button 
-      className='github-repo'
+      className='github-repo-btn'
       type="button" 
       onClick={() => window.open('https://github.com/')}>
         Time Travellers Repo
       </button>
-
       <button
-      className='Hackathon'
+      className='hackathon-btn'
       type='button'
       onClick={() => window.open('https://www.genaicompetition.com/')}>
         Competition Page
@@ -71,7 +72,8 @@ const Links = () => {
 
 const Description = () => {
   return (
-    <p>Description: this is used to evaluate stuff</p>
+    <p>Submit a problem and solution below to get a 3-criteria evaluation</p>
+    //TODO: display server status?
   )
 }
 
