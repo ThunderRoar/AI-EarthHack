@@ -1,9 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { loading, checkIcon, copyIcon, sendIcon } from '../assets';
+
+import { useLazyGetResultQuery } from '../services/probSolve';
+
 import './EvalPanel.css';
 
-import ApiDataFetcher from './DataFetcher.jsx'
+// import ApiDataFetcher from './DataFetcher.jsx'
 
 const EvalPanel = () => {
   const [probSolve, setprobSolve] = useState({
@@ -11,22 +14,32 @@ const EvalPanel = () => {
     soln: ''
   });
 
-  const [formSubitted, setFormSubmitted] = useState(false);
+  // const [formSubitted, setFormSubmitted] = useState(false);
+  // const submitHandler = async (event) => {
+  //   event.preventDefault();
+  //   setFormSubmitted(true);
+
+  //   // console.log(probSolve);
+  //   // alert("Form was submitted!");
+  // };
+
+  // const resetFormSubmitted = () => {
+  //   setFormSubmitted(false);
+  // };
+
+  const [getResult, { error, isFetching }] = useLazyGetResultQuery();
+
   const submitHandler = async (event) => {
     event.preventDefault();
-    setFormSubmitted(true);
+    // change this later to fit our needs
+    const { data } = await getResult();
 
-    // console.log(probSolve);
+    if (data?.anime) {
+      console.log(data.anime);
+    }
+    
     // alert("Form was submitted!");
   };
-
-  const resetFormSubmitted = () => {
-    setFormSubmitted(false);
-  };
-
-  // const submitHandler = (event) => {
-  //   alert("Form was submitted!");
-  // };
 
   const [copyIconState1, setCopyIconState1] = useState('copy');
   const [copyIconState2, setCopyIconState2] = useState('copy');
@@ -60,7 +73,6 @@ const EvalPanel = () => {
             value={probSolve.problem}
             placeholder='Enter the Problem question' 
             onChange={(event) => {
-              resetFormSubmitted(false);
               setprobSolve({
                 ...probSolve, problem: event.target.value
               });
@@ -78,7 +90,6 @@ const EvalPanel = () => {
             value={probSolve.soln}
             placeholder='Enter your Solution for validation' 
             onChange={(event) => {
-              resetFormSubmitted(false);
               setprobSolve({
                 ...probSolve, soln: event.target.value
               });
@@ -93,15 +104,15 @@ const EvalPanel = () => {
         </form>
       </div>
 
-      {formSubitted && (
+      {/* {formSubitted && (
         <div className='eval-result'>
           <ApiDataFetcher probSolve={probSolve}/>
         </div>
-      )}
+      )} */}
 
-      {/* <div className='eval-result'>
+      <div className='eval-result'>
         EVALUATION FORM 
-      </div> */}
+      </div>
 
     </section>
   );
