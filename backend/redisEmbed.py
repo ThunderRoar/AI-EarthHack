@@ -2,14 +2,18 @@
 
 import os
 import dotenv
-from langchain_community.embeddings import CohereEmbeddings
+# from langchain_community.embeddings import CohereEmbeddings
 from langchain_community.vectorstores.redis import Redis
+# from langchain_community.embeddings import OllamaEmbeddings
+from langchain_openai import OpenAIEmbeddings
 
 dotenv.load_dotenv()
 
 REDIS_URL = os.environ["REDIS_URL"]
 INDEX_NAME = "problem"
-embeddings = CohereEmbeddings(model="embed-english-light-v3.0")
+# embeddings = CohereEmbeddings(model="embed-english-light-v3.0")
+# embeddings = OllamaEmbeddings(model="llama2:7b")
+embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
 
 
 def initialize_database():
