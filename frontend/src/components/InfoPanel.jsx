@@ -7,17 +7,20 @@ Use good css
 
 import React from 'react'
 import './InfoPanel.css'
+import Box from './Box.jsx'
 
 const InfoPanel = () => {
   return (
-    <header className='infopanel'>
-      <div className='headerLine'>
-        <Logo></Logo>
-        <Header></Header>
-        <Links></Links>
-      </div>
+    <div className='infopanel'>
+      <Box>
+        <div className='headerLine'>
+          <Logo></Logo>
+          <Header></Header>
+          <Links></Links>
+        </div>
+      </Box>
       <Description></Description>
-    </header>
+    </div>
 
     // <div class="infoPanel">
       
@@ -41,7 +44,7 @@ const Title = () => {
 
 const Header = () => {
   return(
-    <p class="header">Sustainability Problem-Polution Assistant by Team Time Travellers</p>
+    <p class="header">Sustainability Problem-Solution Assistant by Team Time Travellers</p>
   )
 }
 
