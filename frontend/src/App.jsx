@@ -2,6 +2,7 @@ import './App.css'
 
 import EvalPanel from './components/EvalPanel';
 import InfoPanel from './components/InfoPanel';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div className='app'>
         <InfoPanel/>
         <EvalPanel/>
+        <Footer/>
       </div>
     </main>
   )

@@ -13,26 +13,17 @@ const InfoPanel = () => {
   return (
     <div className='infopanel'>
       <Box>
-        <div className='headerLine'>
+        <nav className='headerLine'>
           <Logo></Logo>
-          <Header></Header>
-          <GithubRepoLink></GithubRepoLink>
-          <HackathonLink></HackathonLink>
-        </div>
+          {/* <Header></Header> */}
+          <div className='cont'>
+            <GithubRepoLink></GithubRepoLink>
+            <HackathonLink></HackathonLink>
+          </div>
+        </nav>
       </Box>
+      {/* <Title></Title> */}
     </div>
-
-    // <div class="infoPanel">
-      
-    //     <div class="headerLine">
-    //       <Logo></Logo>
-    //       <Header></Header>
-    //       <Links></Links>
-    //     </div>
-    //     <Title></Title>
-    //     <Description></Description>
-
-    // </div>
   )
 }
 
@@ -57,9 +48,10 @@ const Logo = () => {
 const GithubRepoLink = () => {
   return (
     <button 
-      type="button" 
-      onClick={() => window.open('https://github.com/')}>
-        Time Travellers Repo
+    className='git-button'
+    type="button" 
+    onClick={() => window.open('https://github.com/')}>
+      GitHub Repo
     </button>
   )
 }
@@ -67,9 +59,10 @@ const GithubRepoLink = () => {
 const HackathonLink = () => {
   return (
     <button
+    className='hackathon-button'
     type="button"
     onClick={() => window.open('https://www.genaicompetition.com/')}>
-      Competition Page
+      Hackathon Page
   </button>
   )
 }

@@ -25,7 +25,7 @@ const EvalPanel = () => {
             <input 
             type="text"
             value={probSolve.problem}
-            placeholder='Enter the problem question' 
+            placeholder='Enter the Problem question' 
             onChange={(event) => setprobSolve({
               ...probSolve, problem: event.target.value
             })} 
@@ -37,7 +37,7 @@ const EvalPanel = () => {
             <input 
             type="text"
             value={probSolve.soln}
-            placeholder='Enter your Solution' 
+            placeholder='Enter your Solution for validation' 
             onChange={(event) => setprobSolve({
               ...probSolve, soln: event.target.value
             })} 

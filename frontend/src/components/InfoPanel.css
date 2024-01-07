@@ -16,6 +16,7 @@
 .logo {
     width: 100px;
     object-fit: contain;
+    margin-left: 20px;
 }
 
 .header {
@@ -28,6 +29,42 @@
     margin: 1em;
 }
 
-.github-repo-btn, .hackathon-btn{
-    margin: 0.2em;
+.git-button {
+    border-color: black;
+    border-style: solid;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    border-radius: 9999px;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.git-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.hackathon-button {
+    margin-left: 25px;
+    margin-right: 20px;
+    width: 150px;
+    height: 35px;
+    background-color: rgb(225, 248, 225);
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 200px;
+    border-color: green;
+    cursor: pointer;
+    transition: all;
+}
+
+.hackathon-button:hover {
+    background-color: rgb(13, 106, 52);
+    color: white;
 }

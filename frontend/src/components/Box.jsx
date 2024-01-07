@@ -1,5 +1,5 @@
 import React from 'react'
-import './Box.css'
+import './Box.css' 
 
 const Box = ({children}) => {
     return (

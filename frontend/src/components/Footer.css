@@ -1,0 +1,38 @@
+.footer-panel {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    padding: 20px;  
+    z-index: 999;   
+    width: 100%;
+}
+
+.earth-revolving-sustainability {
+    position: absolute;
+    right: 0;
+    margin-bottom: 40px;
+    margin-right: 45px;
+    width: 75px;
+    height: auto;
+    transition: transform 0.18s ease-in-out;
+    cursor: pointer;
+}
+
+.earth-revolving-sustainability:hover {
+    transform: translateY(-15px);
+    
+}
+
+.footer-panel p {
+    width: 300px;
+    margin: 0;
+    color: rgb(129, 125, 125);
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 13px;
+    top: 50%;
+    left: 50%;
+}

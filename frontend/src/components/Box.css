@@ -1,12 +1,21 @@
 .box {
-    background-color: #fff; /* Set your preferred background color */
+    background-color: white;
     border-radius: 0.625em;
-    box-shadow: 0em 0.25em 0.625em rgba(0, 0, 0, 0.1); /* Define the drop shadow */
-    padding: 1.25em; /* Adjust the padding as needed */
-    margin: 1.25em; /* Adjust the margin as needed */
-    transition: box-shadow 0.3s ease; /* Add a transition for a smooth effect */
+    box-shadow: 0em 0.25em 0.625em rgba(0, 0, 0, 0.1);
+    /* background-image: url('../assets/bg2.png'); */
+    /* background-image: radial-gradient(); */
+    padding: 1.25em;
+    margin: 1.25em;
+    transition: box-shadow 0.3s ease;
+    width: 1000px;
+}
+
+@media (max-width: 100px) {
+    .box {
+        width: 100%;
+    }
 }
 
 .box:hover {
-    box-shadow: 0em 0.5em 1.25em rgba(0, 0, 0, 0.2); /* Adjust shadow on hover */
+    box-shadow: 0em 0.5em 1.25em rgba(0, 0, 0, 0.2);
 }
