@@ -100,6 +100,7 @@ def determine_score(rds, query: str):
     utility_score = 0
     surprise_score = 0
     results = query_database(rds, query, k)
+    # print(results)
     for i in range(0, k):
         metadata = results[i].metadata
         novelty_score += float(metadata["novelty_score"])

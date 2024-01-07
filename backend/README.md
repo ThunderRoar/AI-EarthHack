@@ -9,10 +9,15 @@
 ├── redisEmbed.py         # Functions related to Redis
 └── requirements.txt
 ```
+### Preparing Redis Database
+1. Create a Redis Cloud database or local database
+#### Local Database
+1. Run `docker run -d -p 6379:6379 -p 8001:8001 redis/redis-stack:latest`
+2. Redis URL is now `redis://localhost:6379`
 ### Preparing Environment
 1. `cd` into this directory and create a virtual environment `python3.11 -m venv venv`
 2. Activate the environment `source venv/bin/activate`
-3. Install all modules `pip install -r requirements. txt`
+3. Install all modules `pip install -r requirements.txt`
 4. Create a `.env` file in the root directory similar to below
 ```markdown
 COHERE_API_KEY=<COHERE_API_KEY>

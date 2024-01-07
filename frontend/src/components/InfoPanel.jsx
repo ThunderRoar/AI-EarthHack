@@ -45,7 +45,7 @@ const Header = () => {
 
 const Logo = () => {
   return (
-    <img className="logo" src="/temp_logo.png"></img>
+    <img className="logo" src="/logo-res-v1.png"></img>
   )
 }
 
