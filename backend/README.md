@@ -33,7 +33,7 @@ REDIS_URL=<REDIS_URL>
 3. Run `python importCsv.py` and wait for completion
    - If you have many rows, you may want to add a sleep timer to not barrage Redis and the embedding API
 ### Running the Server
-1. Run `uvicorn main:app --reload`
+1. Run `uvicorn main:app  --reload --host 0.0.0.0 --port 8000`
 ### Getting Results
 1. The server is hosted on port `8000`. Send GET request to `http://127.0.0.1:8000/v1/{query}` with query being the combination of your problem and solution
 ## Docker

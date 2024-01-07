@@ -5,15 +5,14 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const evalApi = createApi({
     reducerPath: 'evalApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://animechan.xyz/api/',
+        baseUrl: 'http://localhost:8000/v1/',
         // prepareHeaders: (headers) => {
-        //     headers.set();
         //     headers.set();
         // }
     }),
     endpoints: (builder) => ({
         getResult: builder.query({
-            query: (params) => `/random`
+            query: (params) => `/${encodeURIComponent(params.statement)}`
         })
     })
 });

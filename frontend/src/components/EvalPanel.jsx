@@ -32,10 +32,10 @@ const EvalPanel = () => {
   const submitHandler = async (event) => {
     event.preventDefault();
     // change this later to fit our needs
-    const { data } = await getResult();
+    const { data } = await getResult({statement: probSolve.problem + " " + probSolve.soln});
 
-    if (data?.anime) {
-      console.log(data.anime);
+    if (data?.scores) {
+      console.log(data.scores);
     }
     
     // alert("Form was submitted!");
