@@ -1,7 +1,8 @@
 // src/components/DataFetcher.js
 import React, { useEffect, useState } from 'react';
+import { loading } from '../assets';
 
-function ApiDataFetcher() {
+function ApiDataFetcher(prop) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -24,16 +25,18 @@ function ApiDataFetcher() {
     };
 
     fetchData();
-  }, []);
+  }, [prop.probSolve]);
 
   return (
     <div>
-      {loading && <p>Loading...</p>}
+      {loading && <img src={loading}></img>}
       {error && <p>Error: {error.message}</p>}
       {data && (
         <div>
           <h2>Data from API:</h2>
-          <p>{data.anime}</p>
+          <p>
+            {data.anime}
+          </p>
         </div>
       )}
     </div>

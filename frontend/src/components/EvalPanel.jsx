@@ -11,9 +11,22 @@ const EvalPanel = () => {
     soln: ''
   });
 
-  const submitHandler = () => {
-    alert("Form was submitted!");
+  const [formSubitted, setFormSubmitted] = useState(false);
+  const submitHandler = async (event) => {
+    event.preventDefault();
+    setFormSubmitted(true);
+
+    // console.log(probSolve);
+    // alert("Form was submitted!");
   };
+
+  const resetFormSubmitted = () => {
+    setFormSubmitted(false);
+  };
+
+  // const submitHandler = (event) => {
+  //   alert("Form was submitted!");
+  // };
 
   const [copyIconState1, setCopyIconState1] = useState('copy');
   const [copyIconState2, setCopyIconState2] = useState('copy');
@@ -46,9 +59,12 @@ const EvalPanel = () => {
             type="text"
             value={probSolve.problem}
             placeholder='Enter the Problem question' 
-            onChange={(event) => setprobSolve({
-              ...probSolve, problem: event.target.value
-            })} 
+            onChange={(event) => {
+              resetFormSubmitted(false);
+              setprobSolve({
+                ...probSolve, problem: event.target.value
+              });
+            }} 
             required
             className='problem-input'/>
 
@@ -61,9 +77,12 @@ const EvalPanel = () => {
             type="text"
             value={probSolve.soln}
             placeholder='Enter your Solution for validation' 
-            onChange={(event) => setprobSolve({
-              ...probSolve, soln: event.target.value
-            })} 
+            onChange={(event) => {
+              resetFormSubmitted(false);
+              setprobSolve({
+                ...probSolve, soln: event.target.value
+              });
+            }} 
             required
             className='soln-input'/>
           {/* </div> */}
@@ -71,15 +90,18 @@ const EvalPanel = () => {
           <button type='submit' className='submit_button'>
             <img className="send-icon" src={sendIcon} alt="" />
           </button>
-
-
         </form>
       </div>
 
-      {/* Display resukts from the user input */}
-      <div className='eval-result'>
-        <ApiDataFetcher></ApiDataFetcher>
-      </div>
+      {formSubitted && (
+        <div className='eval-result'>
+          <ApiDataFetcher probSolve={probSolve}/>
+        </div>
+      )}
+
+      {/* <div className='eval-result'>
+        EVALUATION FORM 
+      </div> */}
 
     </section>
   );
