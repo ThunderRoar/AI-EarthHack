@@ -1,0 +1,23 @@
+numeric:
+- name: novelty_score
+  no_index: false
+  sortable: false
+- name: utility_score
+  no_index: false
+  sortable: false
+- name: surprise_score
+  no_index: false
+  sortable: false
+text:
+- name: content
+  no_index: false
+  no_stem: false
+  sortable: false
+  weight: 1
+  withsuffixtrie: false
+vector:
+- algorithm: FLAT
+  datatype: FLOAT32
+  dims: 384
+  distance_metric: COSINE
+  name: content_vector
