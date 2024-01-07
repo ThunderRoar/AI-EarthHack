@@ -1,5 +1,6 @@
 import pandas as pd
 from redisEmbed import *
+import time
 
 csv_path = '../datasets/Evaluated_AI_EarthHack_Dataset.csv'
 
@@ -48,5 +49,6 @@ if __name__ == "__main__":
         add_vectors(rds, texts, metadata)
         i += 1
         printProgressBar(i + 1, num_rows, prefix='Progress:', suffix='Complete', length=50)
+        # time.sleep(1.0)
         # print(texts)
         # print(metadata)
