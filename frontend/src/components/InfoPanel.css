@@ -17,6 +17,18 @@
     width: 100px;
     object-fit: contain;
     margin-left: 20px;
+
+    animation: rotateLogo 8s linear infinite; 
+    transition: transform 0.3s ease;
+}
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .header {

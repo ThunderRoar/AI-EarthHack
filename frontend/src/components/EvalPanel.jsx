@@ -13,6 +13,24 @@ const EvalPanel = () => {
     alert("Form was submitted!");
   };
 
+  const [copyIconState1, setCopyIconState1] = useState('copy');
+  const [copyIconState2, setCopyIconState2] = useState('copy');
+
+  const copyToClipboard = (value, setCopyIconState) => {
+    const tempTextArea = document.createElement('textarea');
+    tempTextArea.value = value;
+    document.body.appendChild(tempTextArea);
+    tempTextArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempTextArea);
+
+    // Change the icon state to 'check' for a brief moment
+    setCopyIconState('check');
+    setTimeout(() => {
+      setCopyIconState('copy'); 
+    }, 1000);
+  };
+
   return (
     <section className='userInput-css'>
       <div className='search-comp'>
@@ -20,7 +38,7 @@ const EvalPanel = () => {
         className="interactive" 
         onSubmit={submitHandler}>
           {/* <div className='input-box'> */}
-            <img className="copyIcon1-css" src={copyIcon} alt="copy" />
+            <img className={`copyIcon1-css ${copyIconState1 === 'check' ? 'checkIcon' : ''}`} src={copyIconState1 === 'check' ? checkIcon : copyIcon} alt="copy" onClick={() => copyToClipboard(probSolve.problem, setCopyIconState1)}/>
 
             <input 
             type="text"
@@ -32,7 +50,10 @@ const EvalPanel = () => {
             required
             className='problem-input'/>
 
-            <img className="copyIcon2-css" src={copyIcon} alt="copy" />
+            <img 
+            className={`copyIcon2-css ${copyIconState2 === 'check' ? 'checkIcon' : ''}`} 
+            src={copyIconState2 === 'check' ? checkIcon : copyIcon} alt="copy" 
+            onClick={() => copyToClipboard(probSolve.soln, setCopyIconState2)}/>
 
             <input 
             type="text"
@@ -54,6 +75,10 @@ const EvalPanel = () => {
       </div>
 
       {/* Display resukts from the user input */}
+      <div className='eval-result'>
+        Solution Evaluation
+      </div>
+
     </section>
   );
 }
