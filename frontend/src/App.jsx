@@ -4,6 +4,7 @@ import EvalPanel from './components/EvalPanel';
 import InfoPanel from './components/InfoPanel';
 import Footer from './components/Footer';
 import DescPanel from './components/DescPanel';
+import SortPanel from './components/SortPanel';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <InfoPanel/>
         <DescPanel></DescPanel>
         <EvalPanel/>
+        <SortPanel></SortPanel>
         <Footer/>
       </div>
     </main>
