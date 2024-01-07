@@ -17,7 +17,7 @@ function App() {
         <InfoPanel/>
         <DescPanel></DescPanel>
         <EvalPanel/>
-        <SortPanel></SortPanel>
+        <SortPanel isVisible = {true} parameter={GetMockData()}></SortPanel>
         <Footer/>
       </div>
     </main>
@@ -25,3 +25,35 @@ function App() {
 }
 
 export default App;
+
+function GetMockData(){
+  return JSON.stringify(
+    [
+      {
+        rankings: [1, 2, 3],
+        problem: "foo",
+        solution: "foobar"
+      }, 
+      {
+        rankings: [3, 2, 1],
+        problem: "oof",
+        solution: "oofrab"
+      }, 
+      {
+        rankings: [2, 3, 2],
+        problem: "foofoo",
+        solution: "foofoobar"
+      }, 
+      {
+        rankings: [3, 3, 3],
+        problem: "foofoofoo",
+        solution: "foofoofoobar"
+      }, 
+      {
+        rankings: [1, 1, 1],
+        problem: "oofoofoof",
+        solution: "bar"
+      }, 
+    ]
+  )
+}
