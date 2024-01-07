@@ -4,20 +4,31 @@ import { loading, checkIcon, copyIcon, sendIcon } from '../assets';
 import './EvalPanel.css';
 
 const EvalPanel = () => {
+  const [probSolve, setprobSolve] = useState({
+    problem: '',
+    soln: ''
+  });
+
+  const submitHandler = () => {
+    alert("Form was submitted!");
+  };
+
   return (
     <section className='userInput-css'>
       <div className='search-comp'>
         <form 
         className="interactive" 
-        onSubmit={() => {}}>
+        onSubmit={submitHandler}>
           {/* <div className='input-box'> */}
             <img className="copyIcon1-css" src={copyIcon} alt="copy" />
 
             <input 
             type="text"
-            value=""
+            value={probSolve.problem}
             placeholder='Enter the problem question' 
-            onChange={() => {}} 
+            onChange={(event) => setprobSolve({
+              ...probSolve, problem: event.target.value
+            })} 
             required
             className='problem-input'/>
 
@@ -25,9 +36,11 @@ const EvalPanel = () => {
 
             <input 
             type="text"
-            value=""
+            value={probSolve.soln}
             placeholder='Enter your Solution' 
-            onChange={() => {}} 
+            onChange={(event) => setprobSolve({
+              ...probSolve, soln: event.target.value
+            })} 
             required
             className='soln-input'/>
           {/* </div> */}
