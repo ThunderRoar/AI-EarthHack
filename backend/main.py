@@ -18,6 +18,7 @@ def query_dataset(query: str):
     :return: Dictionary containing query text and scores
     """
     rds = existing_database()
+    # print("Exiting Database")
     score_dict = determine_score(rds, query)
-    add_vectors(rds, [query], [score_dict])
+    # add_vectors(rds, [query], [score_dict])
     return {"query": query, "scores": score_dict}
