@@ -16,10 +16,10 @@ const InfoPanel = () => {
         <div className='headerLine'>
           <Logo></Logo>
           <Header></Header>
-          <Links></Links>
+          <GithubRepoLink></GithubRepoLink>
+          <HackathonLink></HackathonLink>
         </div>
       </Box>
-      <Description></Description>
     </div>
 
     // <div class="infoPanel">
@@ -38,38 +38,39 @@ const InfoPanel = () => {
 
 const Title = () => {
   return(
-    <h1 class="title">Team Time Travellers (title)</h1>
+    <h1 className="title">Team Time Travellers (title)</h1>
   )
 }
 
 const Header = () => {
   return(
-    <p class="header">Sustainability Problem-Solution Assistant by Team Time Travellers</p>
+    <p className="header">Sustainability Problem-Solution Assistant by Team Time Travellers</p>
   )
 }
 
 const Logo = () => {
   return (
-    <img class="logo" src="/temp_logo.png"></img>
+    <img className="logo" src="/temp_logo.png"></img>
   )
 }
 
-const Links = () => {
+const GithubRepoLink = () => {
   return (
-    <div>
-      <button 
-      className='github-repo-btn'
+    <button 
       type="button" 
       onClick={() => window.open('https://github.com/')}>
         Time Travellers Repo
-      </button>
-      <button
-      className='hackathon-btn'
-      type='button'
-      onClick={() => window.open('https://www.genaicompetition.com/')}>
-        Competition Page
-      </button>
-    </div>
+    </button>
+  )
+}
+
+const HackathonLink = () => {
+  return (
+    <button
+    type="button"
+    onClick={() => window.open('https://www.genaicompetition.com/')}>
+      Competition Page
+  </button>
   )
 }
 
