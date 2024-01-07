@@ -1,0 +1,28 @@
+.userInput-css {
+    margin-top: 64px;
+    width: 100%;
+    max-width: 576px;
+}
+
+.search-comp {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+}
+
+.interactive {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyicon-css {
+    position: absolute;
+    left: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 12px;
+    width: 20px;
+}

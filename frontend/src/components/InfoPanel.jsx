@@ -10,17 +10,24 @@ import './InfoPanel.css'
 
 const InfoPanel = () => {
   return (
-    <div class="infoPanel">
-      
-        <div class="headerLine">
-          <Logo></Logo>
-          <Header></Header>
-          <Links></Links>
-        </div>
-        <Title></Title>
-        <Description></Description>
+    <header className='infopanel'>
+      <nav className='headerLine'>
+        <Logo></Logo>
+        <Links></Links>
+      </nav>
+    </header>
 
-    </div>
+    // <div class="infoPanel">
+      
+    //     <div class="headerLine">
+    //       <Logo></Logo>
+    //       <Header></Header>
+    //       <Links></Links>
+    //     </div>
+    //     <Title></Title>
+    //     <Description></Description>
+
+    // </div>
   )
 }
 
@@ -44,10 +51,20 @@ const Logo = () => {
 
 const Links = () => {
   return (
-    <div class="links">
-      <a href="https://github.com/ThunderRoar/AI-EarthHack/tree/main" target="_blank">Team Time Travellers GitHub repo</a>
-      <text> </text>
-      <a href='https://www.genaicompetition.com/' target="_blank">The GenAI Competition Page</a>
+    <div>
+      <button 
+      className='github-repo'
+      type="button" 
+      onClick={() => window.open('https://github.com/')}>
+        Time Travellers Repo
+      </button>
+
+      <button
+      className='Hackathon'
+      type='button'
+      onClick={() => window.open('https://www.genaicompetition.com/')}>
+        Competition Page
+      </button>
     </div>
   )
 }
