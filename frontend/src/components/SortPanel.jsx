@@ -5,9 +5,9 @@ import './SortPanel.css'
 
 const SortPanel = ({isVisible, data}) =>{
 
-    console.log("data: " + data);
+    //console.log("data: " + data);
     let sorted = GetSortedEntries(data={data});
-    console.log("sorted: " +sorted);
+    //console.log("sorted: " +sorted);
 
     return isVisible ? (
         <Box>
@@ -18,7 +18,7 @@ const SortPanel = ({isVisible, data}) =>{
 
 const GetSortedEntries = ({data}) => {
 
-    console.log("GetSortedEntries: " + data);
+    //console.log("GetSortedEntries: " + data);
 
     let sorted = sortData(data);
 
