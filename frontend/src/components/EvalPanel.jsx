@@ -138,15 +138,15 @@ const EvalPanel = () => {
             </span>
           </p>
         ) : (
-          data.scores && (
+          probSolve && (
             <div className='results'>
               <h2 className='res-title'>
                 Final Evaluation
               </h2>
               <div className='summ-box'>
-                <p>{probSolve.novelty_score}</p>
-                <p>{probSolve.utility_score}</p>
-                <p>{probSolve.surprise_score}</p>
+                <p>Novelty Score: {probSolve.novelty_score}</p>
+                <p>Utility Score: {probSolve.utility_score}</p>
+                <p>Surprise Score: {probSolve.surprise_score}</p>
               </div>
             </div>
           )

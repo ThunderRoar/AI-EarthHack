@@ -20,7 +20,7 @@ function App() {
         <InfoPanel/>
         <DescPanel></DescPanel>
         <EvalPanel/>
-        <SortPanel isVisible={true} data={entries}></SortPanel>
+        <SortPanel isVisible={false} data={entries}></SortPanel>
         <Footer/>
       </div>
     </main>
