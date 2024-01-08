@@ -11,7 +11,10 @@ import './EvalPanel.css';
 const EvalPanel = () => {
   const [probSolve, setprobSolve] = useState({
     problem: '',
-    soln: ''
+    soln: '',
+    novelty_score: 0,
+    utility_score: 0,
+    surprise_score: 0
   });
 
   // const [formSubitted, setFormSubmitted] = useState(false);
@@ -33,12 +36,25 @@ const EvalPanel = () => {
     event.preventDefault();
     // change this later to fit our needs
     const { data } = await getResult({statement: probSolve.problem + " " + probSolve.soln});
+    // const { data } = await getResult();
+
+    // if (data?.anime) {
+    //   console.log(data.anime);
+    // }
 
     if (data?.scores) {
       console.log(data.scores);
+
+      const newResults = { 
+        ...probSolve, 
+        novelty_score: data.scores.novelty_score,
+        utility_score: data.scores.utility_score,
+        surprise_score: data.scores.surprise_score
+      }
+
+      setprobSolve(newResults);
+      console.log(newResults);
     }
-    
-    // alert("Form was submitted!");
   };
 
   const [copyIconState1, setCopyIconState1] = useState('copy');
@@ -111,7 +127,30 @@ const EvalPanel = () => {
       )} */}
 
       <div className='eval-result'>
-        EVALUATION FORM 
+        {isFetching ? (
+          <img src={loading} alt="loading" className='loading-gif'/>
+        ) : error ? (
+          <p className='error-text'>
+            Well, that wasn't supposed to happen. Your solution may have broke our system!
+            <br />
+            <span className='err'>
+              {error?.data.error}
+            </span>
+          </p>
+        ) : (
+          data.scores && (
+            <div className='results'>
+              <h2 className='res-title'>
+                Final Evaluation
+              </h2>
+              <div className='summ-box'>
+                <p>{probSolve.novelty_score}</p>
+                <p>{probSolve.utility_score}</p>
+                <p>{probSolve.surprise_score}</p>
+              </div>
+            </div>
+          )
+        )}
       </div>
 
     </section>
