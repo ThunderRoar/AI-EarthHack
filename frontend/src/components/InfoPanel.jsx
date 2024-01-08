@@ -25,14 +25,14 @@ const InfoPanel = () => {
           </div>
         </nav>
       </Box>
-      {/* <Title></Title> */}
+       <Title></Title>
     </div>
   )
 }
 
 const Title = () => {
   return(
-    <h1 className="title">Team Time Travellers (title)</h1>
+    <h1 className="title">Team Time Travellers - EvalGen</h1>
   )
 }
 
