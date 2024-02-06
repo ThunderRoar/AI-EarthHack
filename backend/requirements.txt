@@ -16,7 +16,7 @@ dataclasses-json==0.6.3
 distro==1.9.0
 dnspython==2.4.2
 environs==9.5.0
-fastapi==0.108.0
+fastapi==0.109.1
 fastavro==1.9.2
 frozenlist==1.4.1
 grpcio==1.60.0
