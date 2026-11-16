@@ -1,0 +1,13 @@
+name: Dependabot security auto-merge
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-merge:
+    if: github.event.pull_request.user.login == 'dependabot[bot]' && contains(join(github.event.pull_request.labels.*.name, ', '), 'security')\n    runs-on: ubuntu-latest\n    steps:\n      - name: Queue security update for auto-merge\n        env:\n          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n          PR_URL: ${{ github.event.pull_request.html_url }}\n        run: gh pr merge "$PR_URL" --auto --squash --delete-branch\n
