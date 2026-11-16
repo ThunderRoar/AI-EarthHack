@@ -10,4 +10,11 @@ permissions:
 
 jobs:
   auto-merge:
-    if: github.event.pull_request.user.login == 'dependabot[bot]' && contains(join(github.event.pull_request.labels.*.name, ', '), 'security')\n    runs-on: ubuntu-latest\n    steps:\n      - name: Queue security update for auto-merge\n        env:\n          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n          PR_URL: ${{ github.event.pull_request.html_url }}\n        run: gh pr merge "$PR_URL" --auto --squash --delete-branch\n
+    if: github.event.pull_request.user.login == 'dependabot[bot]' && contains(join(github.event.pull_request.labels.*.name, ', '), 'security')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Queue security update for auto-merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: gh pr merge "$PR_URL" --auto --squash --delete-branch
