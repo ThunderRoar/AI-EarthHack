@@ -1,4 +1,4 @@
-name: Dependabot security auto-merge
+name: Dependabot security and compatible update auto-merge
 
 on:
   pull_request_target:
@@ -10,10 +10,17 @@ permissions:
 
 jobs:
   auto-merge:
-    if: github.event.pull_request.user.login == 'dependabot[bot]' && contains(join(github.event.pull_request.labels.*.name, ', '), 'security')
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
-      - name: Queue security update for auto-merge
+      - name: Fetch Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Queue compatible update for auto-merge
+        if: contains(join(github.event.pull_request.labels.*.name, ', '), 'security') || steps.metadata.outputs.update-type == 'version-update:semver-patch' || steps.metadata.outputs.update-type == 'version-update:semver-minor'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
