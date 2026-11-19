@@ -53,7 +53,7 @@ pydantic==2.5.3
 pydantic_core==2.14.6
 pymilvus==2.3.5
 python-dateutil==2.8.2
-python-dotenv==1.0.0
+python-dotenv==1.2.2
 pytz==2023.3.post1
 PyYAML==6.0.1
 qdrant-client==1.9.0
