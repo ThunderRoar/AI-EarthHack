@@ -20,7 +20,7 @@ fastapi==0.109.1
 fastavro==1.9.2
 frozenlist==1.8.0
 grpcio==1.60.0
-grpcio-tools==1.60.0
+grpcio-tools==1.85.3
 h11==0.16.0
 h2==4.4.1
 hpack==4.2.0
