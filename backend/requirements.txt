@@ -18,7 +18,7 @@ dnspython==2.9.2
 environs==9.5.0
 fastapi==0.109.1
 fastavro==1.9.2
-frozenlist==1.4.1
+frozenlist==1.8.0
 grpcio==1.60.0
 grpcio-tools==1.60.0
 h11==0.16.0
