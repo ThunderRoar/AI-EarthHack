@@ -38,7 +38,7 @@ langchain-openai==1.7.4
 langsmith==0.14.17
 marshmallow==3.26.2
 minio==7.2.3
-multidict==6.0.4
+multidict==7.2.1
 mypy-extensions==1.0.0
 numpy==1.26.3
 openai==1.6.1
