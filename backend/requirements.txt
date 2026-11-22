@@ -10,7 +10,7 @@ backoff==2.2.1
 certifi==2026.10.18
 cffi==1.16.0
 charset-normalizer==3.3.2
-click==8.1.7
+click==8.5.1
 cohere==7.3.1
 dataclasses-json==0.6.3
 distro==1.9.0
