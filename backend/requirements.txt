@@ -44,7 +44,7 @@ numpy==2.5.5
 openai==1.6.1
 packaging==23.2
 pandas==3.1.1
-portalocker==2.8.2
+portalocker==4.4.2
 protobuf==7.36.2
 pyarrow==14.0.2
 pycparser==3.12
