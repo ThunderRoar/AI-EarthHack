@@ -54,7 +54,7 @@ pydantic_core==2.14.6
 pymilvus==2.3.5
 python-dateutil==2.8.2
 python-dotenv==1.2.2
-pytz==2023.3.post1
+pytz==2026.6
 PyYAML==6.0.1
 qdrant-client==1.9.0
 redis==5.0.1
