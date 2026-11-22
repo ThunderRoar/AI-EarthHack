@@ -48,7 +48,7 @@ portalocker==2.8.2
 protobuf==7.36.2
 pyarrow==14.0.2
 pycparser==3.12
-pycryptodome==3.19.1
+pycryptodome==4.5.0
 pydantic==2.14.3
 pydantic_core==2.50.4
 pymilvus==2.3.5
