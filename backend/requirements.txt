@@ -70,7 +70,7 @@ tqdm==4.70.1
 typing==3.7.4.3
 typing-inspect==0.9.0
 typing_extensions==4.9.0
-tzdata==2023.4
+tzdata==2026.6
 ujson==6.1.0
 urllib3==2.8.0
 uvicorn==0.54.0
